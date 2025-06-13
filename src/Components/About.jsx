@@ -1,10 +1,9 @@
 import React from "react";
 import ReactLogo from "../assets/Holding.jpg";
-import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <motion.div
+    <div
       initial={{ opacity: 0, x: 200 }}
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -59,7 +58,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

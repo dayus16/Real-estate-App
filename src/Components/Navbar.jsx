@@ -1,6 +1,6 @@
 import ReactLogo from "../assets/House.jpg";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
-import { motion } from "framer-motion";
+
 
 const Navbar = () => {
   return (
@@ -64,7 +64,7 @@ const Navbar = () => {
       </div>
 
       {/* Hero content below navbar */}
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1.5 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ const Navbar = () => {
             <a href="#contacts">Contact Us</a>
           </button>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
