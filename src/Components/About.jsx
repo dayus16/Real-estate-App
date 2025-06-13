@@ -1,9 +1,16 @@
 import React from "react";
 import ReactLogo from "../assets/Holding.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      id="about"
+    >
       <div className="text-center mt-20">
         <h1 className="text-3xl">
           <span className="font-bold">About</span> our Brand
@@ -14,7 +21,11 @@ const About = () => {
       </div>
       <div className="mt-20 p-5 mx-auto md:flex flex-col md:flex-row justify-center gap-10">
         <div>
-          <img className="w-lg h-screen md:h-[400px] rounded-lg" src={ReactLogo} alt="" />
+          <img
+            className="w-lg hidden md:block md:h-[400px] rounded-lg"
+            src={ReactLogo}
+            alt=""
+          />
         </div>
         <div className="md:w-lg md:grid md:grid-cols-2">
           <div>
@@ -48,7 +59,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
